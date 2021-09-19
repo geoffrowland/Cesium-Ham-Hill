@@ -18,6 +18,9 @@
             url: Cesium.IonResource.fromAssetId(605049),
         }),
     });
+    var layer = viewer.imageryLayers.addImageryProvider(
+        new Cesium.IonImageryProvider({ assetId: 605050 })
+    );
     // Fly the camera to Ham Hill, Somerset at the given longitude, latitude, and height.
     viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(-2.73483, 50.94652, 3000)
