@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.81/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.81/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="cesiumContainer"></div>
+  <script>
+    // Get your token from https://cesium.com/ion/tokens
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3ODJiNTI2NC0yNDUzLTRlZWMtOWQ3OS00NDhkZWQ5ZjBjYTYiLCJpZCI6NTgsImlhdCI6MTQ4NzYyNjM0N30.w1o6-XfyCqrGJtj8X4ci4z8zvtFxETG562RORr35O_s';
+    // Keep your Cesium.Ion.defaultAccessToken = 'your_token_here' line above. 
+    // STEP 2 CODE
+    // Initialize the viewer with Cesium World Terrain.
+    var viewer = new Cesium.Viewer("cesiumContainer", {
+        terrainProvider: new Cesium.CesiumTerrainProvider({
+            url: Cesium.IonResource.fromAssetId(605049),
+        }),
+    });
+    // Fly the camera to Ham Hill, Somerset at the given longitude, latitude, and height.
+    viewer.camera.flyTo({
+      destination: Cesium.Cartesian3.fromDegrees(-2.69866, 51.14471, 3000)
+    });
+
+  </script>
+</body>
+</html>
