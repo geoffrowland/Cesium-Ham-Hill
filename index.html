@@ -14,6 +14,8 @@
     // STEP 2 CODE
     // Initialize the viewer with Cesium World Terrain.
     var viewer = new Cesium.Viewer("cesiumContainer", {
+        timeline: false,
+        animation: false,
         terrainProvider: new Cesium.CesiumTerrainProvider({
             url: Cesium.IonResource.fromAssetId(605049),
         }),
