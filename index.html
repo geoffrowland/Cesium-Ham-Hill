@@ -16,6 +16,7 @@
     var viewer = new Cesium.Viewer("cesiumContainer", {
         timeline: false,
         animation: false,
+        baseLayerPicker: false,
         terrainProvider: new Cesium.CesiumTerrainProvider({
             url: Cesium.IonResource.fromAssetId(605049),
         }),
