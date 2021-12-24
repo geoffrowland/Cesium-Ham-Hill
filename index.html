@@ -34,6 +34,7 @@
             url: "https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer",
             layers: "BGS.50k.Bedrock",
             credit: "BGS",
+            defaultAlpha: 0.5,
             parameters: {
                 transparent: true,
                 format: "image/png"
@@ -52,7 +53,7 @@
             } 
         })
     );
-    geolayer.alpha = 0.3;
+    // geolayer.alpha = 0.3;
     // Fly the camera to Ham Hill, Somerset at the given longitude, latitude, and height.
     viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(-2.73783, 50.94652, 3000)
