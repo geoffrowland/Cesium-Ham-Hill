@@ -32,11 +32,11 @@
     var geolayer = viewer.imageryLayers.addImageryProvider(
         new Cesium.WebMapServiceImageryProvider({
             url: "https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer",
-            layers: {"BGS.50k.Bedrock", "BGS.50k.Linear.features"},
+            layers: ["BGS.50k.Bedrock", "BGS.50k.Linear.features"],
             credit: "BGS",
             parameters: {
                 transparent: true,
-                format: "image/png",
+                format: "image/png"
             } 
         })
     );
