@@ -25,6 +25,18 @@
     var layer = viewer.imageryLayers.addImageryProvider(
         new Cesium.IonImageryProvider({ assetId: 605050 })
     );
+    // Add BGS Bedrock
+    var geolayer = viewer.imageryLayers.addImageryProvider(
+        new Cesium.WebMapServiceImageryProvider({
+            url: "https://nationalmap.gov.au/proxy/http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
+            layers: "Hydrography:bores",
+            parameters: {
+                transparent: true,
+                format: "image/png",
+                opacity: 0.5,
+            },       
+        })
+    );
     // Fly the camera to Ham Hill, Somerset at the given longitude, latitude, and height.
     viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(-2.73783, 50.94652, 3000)
