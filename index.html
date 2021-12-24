@@ -32,7 +32,7 @@
     var geolayer = viewer.imageryLayers.addImageryProvider(
         new Cesium.WebMapServiceImageryProvider({
             url: "https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer",
-            layers: "BGS.50k.Bedrock",
+            layers: "BGS.50k.Bedrock, BGS.50k.Linear.features"
             credit: "BGS",
             parameters: {
                 transparent: true,
@@ -40,7 +40,7 @@
             } 
         })
     );
-    geolayer.alpha = 0.25;
+    geolayer.alpha = 0.3;
     // Fly the camera to Ham Hill, Somerset at the given longitude, latitude, and height.
     viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(-2.73783, 50.94652, 3000)
