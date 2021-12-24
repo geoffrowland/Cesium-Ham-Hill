@@ -50,7 +50,7 @@
     var custom = viewer.imageryLayers.addImageryProvider(
         new Cesium.UrlTemplateImageryProvider({
             url : 'https://geoffrowland.github.io/Hillshade-1m-Dorset-Somerset/{z}/{x}/{reverseY}.png',
-            credit: new Cesium.Credit("EA", true)
+            credit: new Cesium.Credit("EA", true),
             rectangle : Cesium.Rectangle.fromDegrees(-2.812500, 50.569283, -2.460938, 52.160455)
         })
     );
@@ -60,7 +60,7 @@
         new Cesium.WebMapServiceImageryProvider({
             url: "https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer",
             layers: "BGS.50k.Bedrock",
-            credit: new Cesium.Credit("BGS", true)
+            credit: new Cesium.Credit("BGS", true),
             parameters: {
                 transparent: true,
                 format: "image/png"
@@ -73,7 +73,7 @@
         new Cesium.WebMapServiceImageryProvider({
             url: "https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer",
             layers: "BGS.50k.Linear.features",
-            credit: new Cesium.Credit("BGS", true)
+            credit: new Cesium.Credit("BGS", true),
             parameters: {
                 transparent: true,
                 format: "image/png"
